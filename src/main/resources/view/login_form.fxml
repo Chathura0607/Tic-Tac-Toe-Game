@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="650.0" prefWidth="450.0" style="-fx-background-color: #40084e; -fx-border-color: red;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.tictactoe.controller.LoginFormController">
+    <children>
+        <Label layoutX="131.0" layoutY="14.0" text="Tic Tac Toe" textAlignment="CENTER" textFill="WHITE" underline="true">
+            <font>
+                <Font name="System Bold" size="36.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="188.0" fitWidth="189.0" layoutX="131.0" layoutY="101.0">
+            <image>
+                <Image url="@../images/unnamed.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="172.0" layoutY="460.0" text="Welcome" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="131.0" layoutY="541.0" text="Click to Start" textAlignment="CENTER" textFill="WHITE" />
+        <Button layoutX="138.0" layoutY="571.0" mnemonicParsing="false" onAction="#btnStartOnAction" prefHeight="46.0" prefWidth="175.0" style="-fx-background-color: #2f77fe; -fx-border-color: #ff55;" text="Start" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

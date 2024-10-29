@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="450.0" style="-fx-background-color: #40084e; -fx-border-color: red;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.tictactoe.service.BoardController">
+    <children>
+        <GridPane gridLinesVisible="true" hgap="3.0" layoutX="14.0" layoutY="213.0" prefHeight="422.0" prefWidth="422.0" style="-fx-background-color:  #092635;" vgap="3.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button fx:id="btn1" layoutX="164.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnOnAction" prefHeight="138.0" prefWidth="138.0" style="-fx-background-color: #1B4242; -fx-border-color: blue;" textFill="WHITE" GridPane.rowIndex="0" GridPane.columnIndex="0">
+                    <font>
+                        <Font name="Trebuchet MS" size="54.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btn2" layoutX="164.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnOnAction" prefHeight="138.0" prefWidth="138.0" style="-fx-background-color: #1B4242; -fx-border-color: blue;" textFill="WHITE" GridPane.rowIndex="0" GridPane.columnIndex="1">
+                    <font>
+                        <Font name="Trebuchet MS" size="54.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btn3" layoutX="164.0" layoutY="135.0" mnemonicParsing="false" onAction="#btnOnAction" prefHeight="138.0" prefWidth="138.0" style="-fx-background-color: #1B4242; -fx-border-color: blue;" textFill="WHITE" GridPane.rowIndex="0" GridPane.columnIndex="2">
+                    <font>
+                        <Font name="Trebuchet MS" size="54.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btn4" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnOnAction" prefHeight="138.0" prefWidth="138.0" style="-fx-background-color: #1B4242; -fx-border-color: blue;" textFill="WHITE" GridPane.rowIndex="1" GridPane.columnIndex="0">
+                    <font>
+                        <Font name="Trebuchet MS" size="54.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btn5" layoutX="10.0" layoutY="135.0" mnemonicParsing="false" onAction="#btnOnAction" prefHeight="138.0" prefWidth="138.0" style="-fx-background-color: #1B4242; -fx-border-color: blue;" textFill="WHITE" GridPane.rowIndex="1" GridPane.columnIndex="1">
+                    <font>
+                        <Font name="Trebuchet MS" size="54.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btn6" layoutX="319.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnOnAction" prefHeight="138.0" prefWidth="138.0" style="-fx-background-color: #1B4242; -fx-border-color: blue;" textFill="WHITE" GridPane.rowIndex="1" GridPane.columnIndex="2">
+                    <font>
+                        <Font name="Trebuchet MS" size="54.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btn7" layoutX="319.0" layoutY="135.0" mnemonicParsing="false" onAction="#btnOnAction" prefHeight="138.0" prefWidth="138.0" style="-fx-background-color: #1B4242; -fx-border-color: blue;" textFill="WHITE" GridPane.rowIndex="2" GridPane.columnIndex="0">
+                    <font>
+                        <Font name="Trebuchet MS" size="54.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btn8" layoutX="10.0" layoutY="259.0" mnemonicParsing="false" onAction="#btnOnAction" prefHeight="138.0" prefWidth="138.0" style="-fx-background-color: #1B4242; -fx-border-color: blue;" textFill="WHITE" GridPane.rowIndex="2" GridPane.columnIndex="1">
+                    <font>
+                        <Font name="Trebuchet MS" size="54.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btn9" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnOnAction" prefHeight="138.0" prefWidth="138.0" style="-fx-background-color: #1B4242; -fx-border-color: blue;" textFill="WHITE" GridPane.rowIndex="2" GridPane.columnIndex="2">
+                    <font>
+                        <Font name="Trebuchet MS" size="54.0" />
+                    </font>
+                </Button>
+            </children>
+        </GridPane>
+        <Label layoutX="162.0" layoutY="14.0" text="Tic Tac Toe" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="124.0" fitWidth="126.0" layoutX="162.0" layoutY="59.0">
+            <image>
+                <Image url="@../images/unnamed.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>
