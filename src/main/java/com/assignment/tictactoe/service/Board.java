@@ -7,4 +7,5 @@ public interface Board {
     void updateMove(int row, int col, Piece piece);
     Winner checkWinner();
     void printBoard();
+    boolean isBoardFull();
 }

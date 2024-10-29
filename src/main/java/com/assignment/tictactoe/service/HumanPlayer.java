@@ -7,6 +7,8 @@ public class HumanPlayer extends Player {
 
     @Override
     public void move(int row, int col) {
-
+        if (board.isLegalMove(row, col)) {
+            board.updateMove(row, col, Piece.X);
+        }
     }
 }
