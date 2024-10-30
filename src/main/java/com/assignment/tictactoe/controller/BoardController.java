@@ -1,5 +1,6 @@
-package com.assignment.tictactoe.service;
+package com.assignment.tictactoe.controller;
 
+import com.assignment.tictactoe.service.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -7,17 +8,28 @@ import javafx.scene.control.Button;
 import javafx.scene.control.DialogEvent;
 
 public class BoardController implements BoardUI {
-    private Player humanPlayer;
-    private Player aiPlayer;
+    private HumanPlayer humanPlayer;
+    private AIPlayer aiPlayer;
     private BoardImpl board;
 
     @FXML
     private Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9;
 
+    private Button[][] buttons;
+
     public BoardController() {
         board = new BoardImpl(this);
         humanPlayer = new HumanPlayer(board);
         aiPlayer = new AIPlayer(board);
+    }
+
+    @FXML
+    public void initialize() {
+        buttons = new Button[][]{
+                {btn1, btn2, btn3},
+                {btn4, btn5, btn6},
+                {btn7, btn8, btn9}
+        };
     }
 
     @FXML
@@ -32,6 +44,7 @@ public class BoardController implements BoardUI {
         int coll = cell % 3;
 
         humanPlayer.move(row, coll);
+        clickButton.setDisable(true);
         updateUI();
 
         Winner winner = board.checkWinner();
@@ -40,7 +53,8 @@ public class BoardController implements BoardUI {
         } else if (board.isBoardFull()) {
             notifyTie();
         } else {
-            aiPlayer.move(row, coll);
+//            aiPlayer.move(row, coll);
+            aiPlayer.findBestMove();
             updateUI();
             board.printBoard();
 
@@ -56,7 +70,6 @@ public class BoardController implements BoardUI {
 //        int col = -1;
 //
 //        int count = 1;
-
 
 
 //        L1:
@@ -98,16 +111,23 @@ public class BoardController implements BoardUI {
 
     @Override
     public void update(int col, int row, Piece piece) {
+        Button buttonUpdate = buttons[row][col];
         Button[][] buttons = {{btn1, btn2, btn3}, {btn4, btn5, btn6}, {btn7, btn8, btn9}};
 
         for (int i = 0; i < buttons.length; i++) {
             for (int j = 0; j < buttons[i].length; j++) {
                 if (piece == Piece.X) {
-                    buttons[row][col].setText("X");
+                    buttonUpdate.setText("X");
+                    buttonUpdate.setDisable(true);
+//                    buttons[row][col].setText("X");
                 } else if (piece == Piece.O) {
-                    buttons[row][col].setText("O");
+                    buttonUpdate.setText("O");
+                    buttonUpdate.setDisable(true);
+//                    buttons[row][col].setText("O");
                 } else {
-                    buttons[row][col].setText(" ");
+                    buttonUpdate.setText(" ");
+                    buttonUpdate.setDisable(false);
+//                    buttons[row][col].setText(" ");
                 }
             }
         }

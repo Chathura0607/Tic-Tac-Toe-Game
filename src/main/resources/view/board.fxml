@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="650.0" prefWidth="450.0" style="-fx-background-color: #40084e; -fx-border-color: red;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.tictactoe.service.BoardController">
+<AnchorPane prefHeight="650.0" prefWidth="450.0" style="-fx-background-color: #40084e; -fx-border-color: red;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.tictactoe.controller.BoardController">
     <children>
         <GridPane gridLinesVisible="true" hgap="3.0" layoutX="14.0" layoutY="213.0" prefHeight="422.0" prefWidth="422.0" style="-fx-background-color:  #092635;" vgap="3.0">
             <columnConstraints>
